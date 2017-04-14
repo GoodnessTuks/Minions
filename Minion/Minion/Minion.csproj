@@ -215,6 +215,79 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="web\404.html" />
+    <Content Include="web\blank.html" />
+    <Content Include="web\buttons.html" />
+    <Content Include="web\calendar.html" />
+    <Content Include="web\charts.html" />
+    <Content Include="web\css\basictable.css" />
+    <Content Include="web\css\bootstrap.css" />
+    <Content Include="web\css\circles.css" />
+    <Content Include="web\css\component.css" />
+    <Content Include="web\css\export.css" />
+    <Content Include="web\css\flipclock.css" />
+    <Content Include="web\css\font-awesome.css" />
+    <Content Include="web\css\jQuery-plugin-progressbar1.css" />
+    <Content Include="web\css\monthly.css" />
+    <Content Include="web\css\style.css" />
+    <Content Include="web\css\style_grid.css" />
+    <Content Include="web\css\table-style.css" />
+    <Content Include="web\faq.html" />
+    <Content Include="web\fonts\fontawesome-webfont.svg" />
+    <Content Include="web\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="web\grids.html" />
+    <Content Include="web\icons.html" />
+    <Content Include="web\images\a1.jpg" />
+    <Content Include="web\images\a2.jpg" />
+    <Content Include="web\images\a3.jpg" />
+    <Content Include="web\images\a4.jpg" />
+    <Content Include="web\images\admin.jpg" />
+    <Content Include="web\images\bottom.jpg" />
+    <Content Include="web\images\overlay.png" />
+    <Content Include="web\images\pic.jpg" />
+    <Content Include="web\images\pic1.jpg" />
+    <Content Include="web\images\profile.jpg" />
+    <Content Include="web\images\profile_bg.jpg" />
+    <Content Include="web\images\progress.jpg" />
+    <Content Include="web\index.html" />
+    <Content Include="web\input.html" />
+    <Content Include="web\js\amcharts.js" />
+    <Content Include="web\js\bars.js" />
+    <Content Include="web\js\bootstrap-3.1.1.min.js" />
+    <Content Include="web\js\Chart.min.js" />
+    <Content Include="web\js\circles.js" />
+    <Content Include="web\js\classie.js" />
+    <Content Include="web\js\contact_me.js" />
+    <Content Include="web\js\export.js" />
+    <Content Include="web\js\flipclock.js" />
+    <Content Include="web\js\gauge.js" />
+    <Content Include="web\js\gnmenu.js" />
+    <Content Include="web\js\jqBootstrapValidation.js" />
+    <Content Include="web\js\jquery-2.1.4.min.js" />
+    <Content Include="web\js\jQuery-plugin-progressbar.js" />
+    <Content Include="web\js\jquery.basictable.min.js" />
+    <Content Include="web\js\jquery.nicescroll.js" />
+    <Content Include="web\js\light.js" />
+    <Content Include="web\js\modernizr.custom.js" />
+    <Content Include="web\js\monthly.js" />
+    <Content Include="web\js\pie.js" />
+    <Content Include="web\js\prettymaps.js" />
+    <Content Include="web\js\radar.js" />
+    <Content Include="web\js\screenfull.js" />
+    <Content Include="web\js\scripts.js" />
+    <Content Include="web\js\serial.js" />
+    <Content Include="web\js\skycons.js" />
+    <Content Include="web\js\valida.2.1.6.min.js" />
+    <Content Include="web\js\validator.min.js" />
+    <Content Include="web\js\xy.js" />
+    <Content Include="web\main-page.html" />
+    <Content Include="web\maps.html" />
+    <Content Include="web\signin.html" />
+    <Content Include="web\signup.html" />
+    <Content Include="web\table.html" />
+    <Content Include="web\typo.html" />
+    <Content Include="web\validation.html" />
+    <Content Include="web\w3layouts-License.txt" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -266,6 +339,17 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Role\Details.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
+    <Content Include="web\fonts\fontawesome-webfont.eot" />
+    <Content Include="web\fonts\fontawesome-webfont.ttf" />
+    <Content Include="web\fonts\fontawesome-webfont.woff" />
+    <Content Include="web\fonts\fontawesome-webfont.woff2" />
+    <Content Include="web\fonts\FontAwesome.otf" />
+    <Content Include="web\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="web\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="web\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="web\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="web\images\Thumbs.db" />
+    <Content Include="web\js\js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -315,7 +399,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50667</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50667/</IISUrl>
+          <IISUrl>http://localhost:62412/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
