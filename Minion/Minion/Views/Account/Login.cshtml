@@ -1,63 +1,173 @@
 ﻿@using Minion.Models
 @model LoginViewModel
 @{
-    ViewBag.Title = "Log in";
+	ViewBag.Title = "Log in";
+	Layout = null;
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
-                    </div>
-                </div>
-                <p>
-                    @Html.ActionLink("Register as a new user", "Register")
-                </p>
-                @* Enable this once you have account confirmation enabled for password reset functionality
-                    <p>
-                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                    </p>*@
-            }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sign In</title>
+	<!-- custom-theme -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Esteem Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+			   function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //custom-theme -->
+	<link href="~/web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/web/css/snow.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/web/css/component.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/web/css/style_grid.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- font-awesome-icons -->
+	<link href="~/web/css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome-icons -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+</head>
+<body>
+	<!-- /pages_agile_info_w3l -->
+	<div class="pages_agile_info_w3l">
+		<!-- /login -->
+		<div class="over_lay_agile_pages_w3ls">
+			<div class="registration">
+
+				<div class="signin-form profile">
+					<h2>Sign in Form</h2>
+					<div class="login-form">
+						<form action="#" method="post">
+							@Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "E-mail", @type = "email", @name= "email" })
+							@*<input type="email" name="email" placeholder="E-mail" required="">*@
+							@Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password", @type = "Password", @name = "Password" })                            
+							@*<input type="password" name="password" placeholder="Password" required="">*@
+							<div class="tp">
+								<input type="submit" value="SIGN IN">
+							</div>
+						</form>
+					</div>
+					<div class="login-social-grids">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-rss"></i></a></li>
+						</ul>
+					</div>
+					<p><a href="signup.html"> Don't have an account?</a></p>
+
+					@*<h6><a href="main-page.html">Back To Home</a><h6>*@
+				</div>
+			</div>           
+		</div>
+	</div>
+	<!-- /login -->
+	<!-- //pages_agile_info_w3l -->
+	<!-- js -->
+
+	<script type="text/javascript" src="~/web/js/jquery-2.1.4.min.js"></script>
+	<script src="~/web/js/modernizr.custom.js"></script>
+
+	<script src="~/web/js/classie.js"></script>
+	<script src="~/web/js/gnmenu.js"></script>
+	<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+	</script>
+
+	<!-- //js -->
+
+	<script src="~/web/js/screenfull.js"></script>
+	<script>
+		$(function () {
+			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+			if (!screenfull.enabled) {
+				return false;
+			}
+
+
+
+			$('#toggle').click(function () {
+				screenfull.toggle($('#container')[0]);
+			});
+		});
+	</script>
+	<script src="~/web/js/jquery.nicescroll.js"></script>
+	<script src="~/web/js/scripts.js"></script>
+	<script src="~/web/js/snow.js"></script>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+	</script>
+	<script type="text/javascript" src="~/web/js/bootstrap-3.1.1.min.js"></script>
+
+
+</body>
+</html>
+@*<div class="row">
+	<div class="col-md-8">
+		<section id="loginForm">
+			@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+			{
+				@Html.AntiForgeryToken()
+				<h4>Use a local account to log in.</h4>
+				<hr />
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+				<div class="form-group">
+					@Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+					<div class="col-md-10">
+						@Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+						@Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+					</div>
+				</div>
+				<div class="form-group">
+					@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+					<div class="col-md-10">
+						@Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+						@Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-offset-2 col-md-10">
+						<div class="checkbox">
+							@Html.CheckBoxFor(m => m.RememberMe)
+							@Html.LabelFor(m => m.RememberMe)
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-offset-2 col-md-10">
+						<input type="submit" value="Log in" class="btn btn-default" />
+					</div>
+				</div>
+				<p>
+					@Html.ActionLink("Register as a new user", "Register")
+				</p>*@
+				@* Enable this once you have account confirmation enabled for password reset functionality
+					<p>
+						@Html.ActionLink("Forgot your password?", "ForgotPassword")
+					</p>*@
+			@*}
+		</section>
+	</div>
+	<div class="col-md-4">
+		<section id="socialLoginForm">
+			@Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+		</section>
+	</div>
+</div>*@
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+	@Scripts.Render("~/bundles/jqueryval")
 }
